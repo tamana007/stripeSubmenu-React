@@ -4,14 +4,22 @@ import { FaBars } from 'react-icons/fa'
 import { useGlobalContext } from './context'
 
 const Navbar = () => {
-  const {isSidebarOpen,isSubmenu,openSidebar,closeSidebar,openSubmenu,closeSubmenu}=useGlobalContext()
+  // const {isSidebarOpen,isSubmenu,openSidebar,closeSidebar,openSubmenu,closeSubmenu,setIsSidebarOpen}=useGlobalContext()
+  // console.log(typeof(openSidebar));
+  const { openSidebar, openSubmenu, closeSubmenu } = useGlobalContext();
   console.log(openSidebar);
   return <>
   <nav>
     <div className='nav-center'>
     <div className='nav-header'>
       <img src={logo} alt='strip' className='nav-logo'></img>
-      <button className='btn toggle-btn' onClick={openSidebar}><FaBars/></button>
+      {/* <button className='btn toggle-btn' onClick={closeSidebar} ><FaBars/></button>
+       */}
+
+<button className='btn toggle-btn' onClick={openSidebar}>
+            <FaBars />
+          </button>
+      
     </div>
     <ul className='nav-links'>
       <li>
