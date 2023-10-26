@@ -146,7 +146,7 @@ Stripe Styles
   justify-content: center;
   background: transparent;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 .nav-center {
   width: 90vw;
@@ -195,6 +195,8 @@ Stripe Styles
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
+  z-index: -1;
+
 }
 .hero-center {
   width: 90vw;
@@ -315,7 +317,7 @@ Stripe Styles
   display: grid;
   place-items: center;
   visibility: hidden;
-  z-index: -1;
+  z-index: 4;
   transition: var(--transition);
   transform: scale(0);
   background: rgba(0, 0, 0, 0.5);
@@ -379,7 +381,7 @@ Stripe Styles
   top: 4rem;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 3;
+  z-index: 1;
   display: none;
   padding: 2rem;
   border-radius: var(--radius);

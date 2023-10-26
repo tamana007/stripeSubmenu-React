@@ -3,7 +3,7 @@ import phoneImg from './images/phone.svg'
 import {useGlobalContext}from './context'
 
 const Hero = () => {
-const {closeSubmenu}=useGlobalContext;
+// const {closeSubmenu}=useGlobalContext;
   return <>
   <section className='hero'>
     <div className='hero-center'>
