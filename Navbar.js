@@ -10,7 +10,7 @@ const Navbar = () => {
 
   
   function showSubmenu(e) {
-    const page=e.target.textContent
+    const page=e.target.textContent;
     const tempBtn=e.target.getBoundingClientRect();
     const center=(tempBtn.right+tempBtn.left)/2;
     const bottom=(tempBtn.bottom-3)
@@ -42,12 +42,12 @@ const Navbar = () => {
             </li>
             <li>
               <button className="link-btn" onMouseOver={showSubmenu}>
-                Developers
+              developers
               </button>
             </li>
             <li>
               <button className="link-btn" onMouseOver={showSubmenu}>
-                Company
+              company
               </button>
             </li>
           </ul>
