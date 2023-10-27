@@ -2,12 +2,14 @@ import React, { useState, useRef, useEffect } from "react";
 import { useGlobalContext } from "./context";
 import sublinks from "./data";
 
+
 const Submenu = () => {
   const {
     isSubmenu,
     openSubmenu,
     closeSubmenu,
     location,
+    // page,
     page: { page, links },
   } = useGlobalContext();
   const container = useRef(null);
@@ -33,13 +35,10 @@ const Submenu = () => {
         ref={container}
         className={`${isSubmenu ? "submenu show" : "submenu"}`}
       >
-        {/* {sublinks.map((link,index)=>{
-const {label,url}=link;
-      return <div className='submenu-center'><a href={url} key={index}>{label}</a></div>
-    })} */}
+       
         {
           <h4>
-            {/* <div> */}
+            
             {page}
             <div className={`submenu-center ${coloumn}`}>
               {links.map((item, index) => {

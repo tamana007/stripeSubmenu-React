@@ -3,7 +3,10 @@ import phoneImg from './images/phone.svg'
 import {useGlobalContext}from './context'
 
 const Hero = () => {
-const {closeSubmenu}=useGlobalContext;
+const {closeSubmenu}=useGlobalContext();
+// console.log('ki');
+
+
   return <>
   <section className='hero' onMouseOver={closeSubmenu}>
     <div className='hero-center'>

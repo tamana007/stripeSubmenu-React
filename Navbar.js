@@ -14,12 +14,18 @@ const Navbar = () => {
     const tempBtn=e.target.getBoundingClientRect();
     const center=(tempBtn.right+tempBtn.left)/2;
     const bottom=(tempBtn.bottom-3)
-    console.log("hi");
+    // console.log("hi");
     openSubmenu(page,{center,bottom});
+  }
+  const handleSubmenu=(e)=>{
+    if(!e.target.classList.contains('link-btn')){
+  closeSubmenu();
+    }
+
   }
   return (
     <>
-      <nav>
+      <nav onMouseOver={handleSubmenu}>
         <div className="nav-center">
           <div className="nav-header">
             <img src={logo} alt="strip" className="nav-logo"></img>
@@ -51,7 +57,7 @@ const Navbar = () => {
               </button>
             </li>
           </ul>
-          <button className="btn signin-btn" onMouseOver={showSubmenu}>
+          <button className="btn signin-btn">
             Sign In
           </button>
         </div>
